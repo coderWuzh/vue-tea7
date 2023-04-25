@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0px;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+input:focus {
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+section {
+  flex: 1;
+  overflow: hidden;
+  width: 100%;
+}
