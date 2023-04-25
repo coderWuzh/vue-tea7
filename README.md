@@ -1,5 +1,7 @@
-# tea7
-
+# vue-tea7
+由vue2+nodejs+mysql编写的全栈移动端电商项目
+目前存在bug：
+  - better-scroll在渲染页面完成之前计算高度，计算结果不准确，使用setTimeout来延时进行高度计算
 ## Project setup
 ```
 npm install
