@@ -1,18 +1,9 @@
 <template>
   <div class="tabber">
     <ul>
-      <li
-        v-for="(item, index) in tabberList"
-        :key="index"
-        @click="toPath(item.path)"
-        :class="isActive(item.path) ? 'active' : ''"
-      >
-        <van-icon
-          size="25px"
-          :name="item.icon"
-          v-if="item.name == '购物车'"
-          :badge="cartNum"
-        />
+      <li v-for="(item, index) in tabberList" :key="index" @click="toPath(item.path)"
+        :class="isActive(item.path) ? 'active' : ''">
+        <van-icon size="25px" :name="item.icon" v-if="item.name == '购物车'" :badge="cartNum" />
         <van-icon size="25px" :name="item.icon" v-else />
         <span>{{ item.name }}</span>
       </li>
@@ -85,24 +76,33 @@ export default {
 
 <style lang="scss" scoped>
 .tabber {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
   width: 100%;
+
   ul {
     display: flex;
     justify-content: space-around;
     padding: 3.5px 0;
+
     li {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
       span {
         font-size: 12px;
       }
+
       &.active {
         color: #b0352f;
       }
     }
   }
+
   .van-info {
     border: none;
     top: 4px;
